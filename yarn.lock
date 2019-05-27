@@ -1286,6 +1286,11 @@ babel-preset-jest@^24.6.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.6.0"
 
+baidumobstat-react-native@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npm.taobao.org/baidumobstat-react-native/download/baidumobstat-react-native-1.1.6.tgz#307f4c18ec8da50f51f4ce98084aa53f08a26a32"
+  integrity sha1-MH9MGOyNpQ9R9M6YCEqlPwiiajI=
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/balanced-match/download/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
