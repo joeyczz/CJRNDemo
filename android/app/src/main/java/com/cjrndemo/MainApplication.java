@@ -3,6 +3,7 @@ package com.cjrndemo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.sentry.RNSentryPackage;
 import com.baidu.reactnativemobstat.RNBaiduMobStatPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import org.reactnative.camera.RNCameraPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSentryPackage(),
             new RNBaiduMobStatPackage(),
             new RNGestureHandlerPackage(),
             new RNCameraPackage()
