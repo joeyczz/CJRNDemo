@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
+import BaiduMobStat from "baidumobstat-react-native";
 
 export default class Home extends React.Component {
+
   constructor(props) {
     super(props);
 
@@ -10,13 +12,15 @@ export default class Home extends React.Component {
     };
   }
 
-  componentWillMount = () => {
+  componentWillMount() {
     this.start();
-  };
+    BaiduMobStat.onPageStart('广告');
+  }
 
-  componentWillUnmount = () => {
+  componentWillUnmount() {
+    BaiduMobStat.onPageEnd('广告');
     clearTimeout(this.timer);
-  };
+  }
 
   start() {
     this.timer = setTimeout(() => {

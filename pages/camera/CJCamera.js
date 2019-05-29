@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, Animated, View, Text, Easing } from "react-native";
 import { RNCamera } from "react-native-camera";
+import BaiduMobStat from "baidumobstat-react-native";
 
 export default class Camera extends Component {
+
   constructor(props) {
     super(props);
 
@@ -11,8 +13,13 @@ export default class Camera extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.startAnimation();
+    BaiduMobStat.onPageStart('扫码');
+  }
+
+  componentWillUnmount() {
+    BaiduMobStat.onPageEnd('扫码');
   }
 
   startAnimation() {
